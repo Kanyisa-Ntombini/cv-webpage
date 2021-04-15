@@ -16,7 +16,6 @@ body {
   left: 0;
   top: 0;
   font-size: 100%;
-  background-color: aliceblue; /* ADDED BY ME */
 }
 
 /* ROOT FONT STYLES */
@@ -25,17 +24,18 @@ body {
   font-family: 'Lato', Helvetica, sans-serif;
   color: #333447;
   line-height: 1.5;
-  box-sizing: border-box; /* ADDED BY ME */
+  box-sizing: border-box;
 }
 
 /* TYPOGRAPHY */
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;  /* was 2.5rem */
+  text-align: center;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2rem; 
 }
 
 h3 {
@@ -58,6 +58,46 @@ p {
   font-size: 1.125rem;
   font-weight: 200;
   line-height: 1.8;
+}
+
+form {
+  background-color: rgb(240, 204, 204);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+input {
+  padding: 0.5rem;
+}
+
+textarea {   /* MESSAGE BOX */
+  height: 10rem;
+  padding: 1rem;
+  resize: none;
+}
+
+nav ul {/*border of title bar*/
+  background-color:mintcream;
+  border-style: solid;
+  border-color: crimson;
+  border-width: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  
+}
+nav ul li {
+  list-style-type: none; 
+  display: inline;
+  margin-right: 2rem; /*help with spacing out title words*/
+  margin-left: 2rem;
+  color: crimson;
+}
+nav ul li a { /*about me, health, body, etc*/
+  text-decoration: none;
+  color: #003366;
 }
 
 .font-light {
@@ -95,9 +135,9 @@ p {
 /* ==== GRID SYSTEM ==== */
 
 .container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 90%; /* was 90%*/
+  margin-left: auto;  /* WAS AUTO */
+  margin-right: auto; /* WAS AUTO */
 }
 
 .row {
@@ -126,7 +166,7 @@ p {
   width: 96%;
 }
 
-.col-1-sm {
+/*.col-1-sm {
   width: 4.33%;
 }
 
@@ -172,7 +212,7 @@ p {
 
 .col-12-sm {
   width: 96%;
-}
+}*/
 
 .row::after {
 	content: "";
@@ -184,9 +224,97 @@ p {
   display: none;
 }
 
+@media only screen and (max-width: 33.74em) { /* ADDED BY ME */
+  .container {
+    width: 80%; /* was 80%*/
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 0.7rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+  }
+
+  label {
+    font-size: 0.7rem;
+  }
+
+  nav ul li {
+    font-size: 0.6rem;
+    list-style-type: none; 
+    display: inline;
+    margin-right: 0.2rem; /*help with spacing out title words*/
+    margin-left: 0.2rem;
+    color: crimson;
+  }
+  nav ul li a { /*about me, health, body, etc*/
+    text-decoration: none;
+    color: #003366;
+  }
+
+  .col-1-sm {
+    width: 4.33%;
+  }
+  
+  .col-2-sm {
+    width: 12.66%;
+  }
+  
+  .col-3-sm {
+    width: 21%;
+  }
+  
+  .col-4-sm {
+    width: 29.33%;
+  }
+  
+  .col-5-sm {
+    width: 37.66%;
+  }
+  
+  .col-6-sm {
+    width: 46%;
+  }
+  
+  .col-7-sm {
+    width: 54.33%;
+  }
+  
+  .col-8-sm {
+    width: 62.66%;
+  }
+  
+  .col-9-sm {
+    width: 71%;
+  }
+  
+  .col-10-sm {
+    width: 79.33%;
+  }
+  
+  .col-11-sm {
+    width: 87.66%;
+  }
+  
+  .col-12-sm {
+    width: 96%;
+  }
+}
+
 @media only screen and (min-width: 33.75em) {  /* 540px */
   .container {
-    width: 80%;
+    width: 80%; /* was 80%*/
   }
 }
 
@@ -246,30 +374,31 @@ p {
 
 @media only screen and (min-width: 60em) { /* 960px */
   .container {
-    width: 75%;
+    width: 75%;  /* WAS 75% */
     max-width: 60rem;
+  }
+
+  img {
+    border-radius: 50%;
   }
 }
 
-/*************************************************
-BACKGROUND COLORS 
-*************************************************/
+/* === BACKGROUND COLORS === */
+
 .blue {
-  background-color: lightskyblue;
+  background-color: lightblue;
 }
 
-.yellow {
-  background-color: yellow;
+.grey {
+  background-color: grey;
 }
 
 .green {
   background-color: lightgreen;
 }
 
-.red {
-  background-color: red;
-}
+/* === TITLE === */
 
-.pink {
-  background-color: lightpink;
+.title-color {
+  background-color: crimson;
 }
